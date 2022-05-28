@@ -12,6 +12,8 @@
         {
 
             Console.WriteLine("Welcome to the Line Comparison Computation Program");
+            CompareLineLength compareLineLength = new CompareLineLength();
+            compareLineLength.get();
 
         }
 
