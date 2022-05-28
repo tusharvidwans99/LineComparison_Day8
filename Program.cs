@@ -11,7 +11,7 @@
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to the Line Comparison Computation Program");
+            Console.WriteLine("Welcome to the Line Comparison Computation Program\n");
             CompareLineLength compareLineLength = new CompareLineLength(0);
             compareLineLength.MesuretheLength();
 

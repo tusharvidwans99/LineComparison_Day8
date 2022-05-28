@@ -29,16 +29,23 @@ namespace LineComparison_Day8
         {
             CompareLineLength line1 = new CompareLineLength(1);
             CompareLineLength line2 = new CompareLineLength(2);
-            double lengthofLine = Math.Sqrt(Math.Pow((line1.x2 - line1.x1), 2) + Math.Pow((line1.y2 - line1.y1), 2));
-            double lengthofLine2 = Math.Sqrt(Math.Pow((line2.x2 - line2.x1), 2) + Math.Pow((line2.y2 - line2.y1), 2));
+            double lengthofLine = Math.Round(Math.Sqrt(Math.Pow((line1.x2 - line1.x1), 2) + Math.Pow((line1.y2 - line1.y1), 2)),4);
+            double lengthofLine2 = Math.Round(Math.Sqrt(Math.Pow((line2.x2 - line2.x1), 2) + Math.Pow((line2.y2 - line2.y1), 2)),4);
 
             if (lengthofLine2 == lengthofLine)
             {
-                Console.WriteLine("Both lines are Equal OR Identical");
+                Console.WriteLine("Both lines are Equal OR Identical: ");
+                Console.WriteLine($"line1: {lengthofLine} \n line2: {lengthofLine2}");
+            }
+            else if (lengthofLine > lengthofLine2)
+            {
+                Console.WriteLine("Line1 is greater than Line2");
+                Console.WriteLine($"line1: {lengthofLine} \n line2: {lengthofLine2}");
             }
             else
             {
-                Console.WriteLine("Both lines are non identical");
+                Console.WriteLine("Line1 is lesser than Line2");
+                Console.WriteLine($"line1: {lengthofLine} \nline2: {lengthofLine2}");
             }
         }
 
